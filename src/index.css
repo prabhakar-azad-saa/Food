@@ -1,0 +1,105 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --color-background: #f6f4f0;
+  --color-foreground: #18181b;
+  --color-primary: #18181b;
+  --color-muted-foreground: #71717a;
+}
+
+.dark {
+  --color-background: #141416;
+  --color-foreground: #f4f4f5;
+  --color-primary: #f4f4f5;
+  --color-muted-foreground: #a1a1aa;
+}
+
+body {
+  margin: 0;
+  background-color: var(--color-background);
+  color: var(--color-foreground);
+  font-family: dsh-face, ui-sans-serif, system-ui, sans-serif;
+  overflow-x: hidden;
+}
+
+/* Shared Dish Orbit Carousel theme classes for cards, overlays, and pages */
+.dsh-glass-card {
+  border-radius: 20px;
+  background: color-mix(in oklab, var(--color-background) 74%, transparent);
+  -webkit-backdrop-filter: blur(16px);
+  backdrop-filter: blur(16px);
+  box-shadow:
+    0 1px 0 color-mix(in oklab, var(--color-foreground) 8%, transparent) inset,
+    0 18px 40px -24px rgba(0, 0, 0, 0.25);
+  border: 1px solid color-mix(in oklab, var(--color-foreground) 7%, transparent);
+}
+
+.dsh-glass-strong {
+  border-radius: 24px;
+  background: color-mix(in oklab, var(--color-background) 86%, transparent);
+  -webkit-backdrop-filter: blur(22px);
+  backdrop-filter: blur(22px);
+  box-shadow:
+    0 1px 0 color-mix(in oklab, var(--color-foreground) 10%, transparent) inset,
+    0 24px 60px -20px rgba(0, 0, 0, 0.35);
+  border: 1px solid color-mix(in oklab, var(--color-foreground) 9%, transparent);
+}
+
+.dsh-pill {
+  font-size: 11px;
+  padding: 4px 10px;
+  border-radius: 99px;
+  background: color-mix(in oklab, var(--color-foreground) 7%, transparent);
+  transition: background 0.25s, transform 0.25s;
+}
+
+.dsh-pill-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  height: 36px;
+  padding: 0 16px;
+  border-radius: 99px;
+  font-size: 12px;
+  font-weight: 500;
+  background: color-mix(in oklab, var(--color-foreground) 6%, transparent);
+  color: var(--color-foreground);
+  border: 1px solid color-mix(in oklab, var(--color-foreground) 6%, transparent);
+  cursor: pointer;
+  transition: all 0.25s cubic-bezier(0.3, 0.7, 0.2, 1);
+}
+
+.dsh-pill-btn:hover {
+  background: color-mix(in oklab, var(--color-foreground) 12%, transparent);
+  transform: translateY(-1px);
+}
+
+.dsh-pill-btn[data-active="true"] {
+  background: var(--color-foreground);
+  color: var(--color-background);
+}
+
+.dsh-plate-shadow {
+  filter: drop-shadow(0 16px 22px rgba(0, 0, 0, 0.22)) drop-shadow(0 3px 5px rgba(0, 0, 0, 0.14));
+}
+
+.dsh-display-t1 {
+  display: block;
+  font-weight: 200;
+  letter-spacing: -0.015em;
+  line-height: 1;
+  text-transform: uppercase;
+}
+
+.dsh-display-t2 {
+  display: block;
+  font-weight: 800;
+  letter-spacing: -0.025em;
+  line-height: 1;
+  text-transform: uppercase;
+  color: color-mix(in oklab, var(--color-foreground) 86%, transparent);
+}
+
+
